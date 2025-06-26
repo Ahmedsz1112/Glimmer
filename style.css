@@ -1,3 +1,95 @@
 body {
-    font-family: "Manrope", sans-serif;
+  font-family: "Harmattan", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.box-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+:root {
+  --main-color: #ce9461;
+  --secondry-color: #1e3231;
+  --bg-color: #f0e5d3;
+  --bg-product: #fbf9f6;
+}
+
+/* header */
+
+#nav-belt {
+  background-color: var(--main-color);
+}
+
+header nav #icons {
+  display: flex;
+  gap: 10px;
+}
+
+header nav #icons i,
+header nav ul .fa-bars {
+  background-color: #ce94611f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+header nav .shopping {
+  color: white;
+  background-color: #ce9461 !important;
+  position: relative;
+}
+
+header nav .shopping::after {
+  content: "1";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: black;
+  border-radius: 50%;
+  top: -3px;
+  right: -5px;
+  font-size: 6px;
+  text-align: center;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+header nav ul .fa-bars {
+  background-color: var(--secondry-color) !important;
+  color: white;
+  font-size: 25px;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+header nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 2px;
+  background-color: var(--main-color);
+  left: 12px;
+  bottom: -3px;
+  display: none;
+}
+
+header nav ul li.active::after {
+  display: block;
+}
+
+header nav ul li a {
+  color: #000000b2;
+}
+
+header nav ul li.active a,
+header nav ul li a:hover {
+  color: #000;
 }

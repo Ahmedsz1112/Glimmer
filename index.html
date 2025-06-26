@@ -13,7 +13,13 @@
       content="جليمر, تسوق, عروض, منتجات, تسوق إلكتروني, خدمات, متجر إلكتروني"
     />
     <!--Links-->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&family=Kaushan+Script&family=Manrope:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -22,27 +28,71 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&family=Kaushan+Script&family=Manrope:wght@600&display=swap"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <title>Glimmer</title>
-  </head> 
+  </head>
   <body>
     <!--start header-->
     <header>
-      <div id="nav-belt" class="">
-        <div>Welcome Ahmed Salah</div>
-        <div></div>
+      <div id="nav-belt">
+        <div
+          class="box-container flex justify-between py-2 px-2 text-base font-semibold"
+        >
+          <div class="flex flex-row-reverse gap-2">
+            <div class="flex">
+              <a href="#">العربية - رس</a>
+              <img src="./assets/image/flag.png" class="w-6 pl-1" />
+            </div>
+            <a href="#" class="border-r-2 border-l-2 border-black px-3"
+              >المفضلة</a
+            >
+            <a href="#" class="border-l-2 border-black pl-3"
+              >سياسة الإستبدال أو الاسترجاع</a
+            >
+            <a href="#" class="pr-1">تواصل معنا</a>
+          </div>
+          <div class="flex gap-2 items-center">
+            <a href="#">Support@salla.sa</a>
+            <i class="fa-regular fa-envelope pr-2"></i>
+            <a href="#" class="border-l-2 border-black pl-3">+966556754472</a>
+            <i class="fa-solid fa-phone-volume fa-flip-horizontal"></i>
+          </div>
+        </div>
       </div>
-      <nav>
-        <div id="icons"></div>
-        <ul>
-          <li><a href="" title=""></a></li>
-          <li><a href="" title=""></a></li>
-          <li><a href="" title=""></a></li>
+      <nav
+        class="box-container flex justify-between items-center py-3"
+      >
+        <div id="icons">
+          <i class="fa-solid fa-cart-shopping shopping"></i>
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-user"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="relative">
+            <img src="./assets/image/star.png" class="w-5 absolute bottom-9 left-2 z-1" />
+            <img src="./assets/image/diamond.png" class="w-12" />
+          </div>
+          <div class="relative font-normal">
+            <h1
+              class="border-b-2 border-yellow-500 uppercase text-3xl  pb-1"
+            >
+              glimmer
+            </h1>
+            <span
+              class="absolute top-8 left-8 text-xs bg-white px-1"
+              >Jewelry</span
+            >
+          </div>
+        </div>
+        <ul class="flex flex-row-reverse items-center gap-5">
+          <i class="fa-solid fa-bars"></i>
+          <li class="active"><a href="" title="" class="text-2xl">الرئيسية</a></li>
+          <li><a href="" title="" class="text-2xl">المدونة</a></li>
+          <li><a href="" title="" class="text-2xl">تخفيضات</a></li>
         </ul>
       </nav>
     </header>
@@ -79,5 +129,7 @@
     <!--end footer-->
 
     <script src="./script.js"></script>
+    <!--swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

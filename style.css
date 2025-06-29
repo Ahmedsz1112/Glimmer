@@ -2,6 +2,7 @@ body {
   font-family: "Harmattan", sans-serif !important;
   font-weight: 400;
   font-style: normal;
+  position: relative;
 }
 
 .box-container {
@@ -18,6 +19,121 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+/* nav mobile */
+body .nav-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body .nav-mobile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondry-color);
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  body .nav-mobile .nav-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    color: white;
+  }
+
+  body .nav-mobile .nav-title div i {
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  body .nav-links {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin: 30px;
+    color: white;
+  }
+
+  body .nav-links div {
+    border-bottom: 1px solid #ffffff96;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .nav-links div i {
+    padding-left: 15px;
+  }
+
+  body .nav-links div a {
+    transition: 0.3s;
+  }
+  body .nav-links div a:hover {
+    color: var(--main-color);
+  }
+}
+
+/* nav-url */
+body .nav-url {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body .nav-url {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondry-color);
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  body .nav-url .nav-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    border-bottom: 1px solid #ffffff96;
+  }
+
+  body .nav-url .nav-title div .fa-xmark {
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  body .nav-url .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 0px;
+    margin: 0 30px;
+    color: white;
+  }
+
+  body .nav-url .nav-links a {
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: end;
+    transition: 0.3s;
+  }
+
+  body .nav-url .nav-links a:not(:first-child) {
+    border-top: 1px solid #ffffff96;
+  }
+
+  body .nav-url .nav-links a:hover {
+    color: var(--main-color);
+  }
 }
 
 /* header */
@@ -963,7 +1079,7 @@ header nav ul li a:hover {
 }
 
 .article .all-latest {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .article .all-latest h2 {
@@ -1161,7 +1277,12 @@ header nav ul li a:hover {
 
 .ask .all-ask .question h2 {
   font-size: 32.17px;
+  color: var(--main-color);
   cursor: pointer;
+}
+
+.ask .all-ask .question h2.active {
+  color: var(--secondry-color);
 }
 
 .ask .all-ask .question img {
@@ -1191,6 +1312,10 @@ header nav ul li a:hover {
   font-size: 24px;
   color: var(--main-color);
   cursor: pointer;
+}
+
+.ask .all-ask .question .question-controll h2.active {
+  color: var(--secondry-color);
 }
 
 .ask .all-ask .question .question-controll p {
@@ -1378,6 +1503,10 @@ header nav ul li a:hover {
 footer {
   background-color: var(--secondry-color);
   padding-top: 20px;
+}
+
+footer .box-container {
+  padding-inline: 20px;
 }
 
 footer .footer-contant p {
